@@ -28,6 +28,12 @@ module Enumerable
 
     false
   end
+
+  def my_none?(&my_block)
+    return true unless my_any?(&my_block)
+
+    false
+  end
 end
 
 # You will first have to define my_each
