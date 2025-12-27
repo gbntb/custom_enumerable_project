@@ -22,6 +22,12 @@ module Enumerable
 
     false
   end
+
+  def my_any?(&my_block)
+    return true unless my_select(&my_block).length.zero?
+
+    false
+  end
 end
 
 # You will first have to define my_each
