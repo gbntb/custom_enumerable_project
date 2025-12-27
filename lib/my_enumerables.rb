@@ -16,6 +16,12 @@ module Enumerable
 
     my_array
   end
+
+  def my_all?(&my_block)
+    return true if my_select(&my_block).length == length
+
+    false
+  end
 end
 
 # You will first have to define my_each
