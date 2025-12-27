@@ -8,4 +8,11 @@ end
 # to this method
 class Array
   # Define my_each here
+  def my_each(&my_block)
+    for i in 0...length
+      my_block.call self[i]
+    end
+
+    self
+  end
 end
