@@ -7,6 +7,15 @@ module Enumerable
 
     self
   end
+
+  def my_select(&my_block)
+    my_array = []
+    my_each do |element|
+      my_array.push element if my_block.call element
+    end
+
+    my_array
+  end
 end
 
 # You will first have to define my_each
