@@ -34,6 +34,12 @@ module Enumerable
 
     false
   end
+
+  def my_count(&my_block)
+    return length unless block_given?
+
+    my_select(&my_block).length
+  end
 end
 
 # You will first have to define my_each
