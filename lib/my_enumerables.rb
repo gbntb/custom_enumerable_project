@@ -40,6 +40,13 @@ module Enumerable
 
     my_select(&my_block).length
   end
+
+  def my_map(&my_block)
+    my_array = []
+    my_each { |element| my_array.push my_block.call(element) }
+
+    my_array
+  end
 end
 
 # You will first have to define my_each
