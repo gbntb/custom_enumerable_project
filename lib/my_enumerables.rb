@@ -48,7 +48,7 @@ module Enumerable
     my_array
   end
 
-  def my_inject(initial_value, &my_block)
+  def my_inject(initial_value = 0, &my_block)
     acc = initial_value
     my_each { |element| acc = my_block.call(acc, element) }
 
